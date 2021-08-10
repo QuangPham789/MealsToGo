@@ -1,8 +1,12 @@
 import React from 'react';
 import { StatusBar, SafeAreaView, Platform, StyleSheet, Text, View } from 'react-native';
 import { Searchbar } from 'react-native-paper';
+import {RestaurantsInfo} from '../restaurant.component'
 
 export const RestaurantsScreen = () => {
+    const [searchQuery, setSearchQuery] = React.useState('');
+
+    const onChangeSearch = query => setSearchQuery(query);
     return (
         <SafeAreaView style={{ flex: 1, marginTop: StatusBar.currentHeight }}>
             <View style={{ padding: 16, backgroundColor: 'green' }}>
@@ -12,7 +16,7 @@ export const RestaurantsScreen = () => {
             </View>
 
             <View style={{ padding: 16, flex: 1, backgroundColor: 'blue' }}>
-                <Text>List</Text>
+                <RestaurantsInfo />
             </View>
         </SafeAreaView>
     );
