@@ -5,7 +5,7 @@ import {Text} from 'react-native'
 export const RestaurantsInfo = () =>{
 
 return(
-    <Text>Restaurants Info</Text>
+    <Text>Restaurants Infoxxxx</Text>
 );
 
 }
